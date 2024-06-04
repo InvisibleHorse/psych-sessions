@@ -21,7 +21,7 @@ const AddSession: React.FC<AddSessionProps> = ({ addSession }) => {
 
         if (selectedClient && selectedProduct) {
             const newSession: Session = {
-                id: String(Date.now()), // Generate a unique ID for the session
+                id: String(Date.now()),
                 clientId,
                 productId,
                 name: `${selectedClient.name} - ${selectedProduct.name}`,
