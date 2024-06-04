@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply text-foreground;
+    background-color: #f8f6f300;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  button {
+    @apply font-bold;
+    font-family: "Space Grotesk", sans-serif;
+    color: #3369ff;
+  }
+
+  p, span {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  input {
+    @apply w-full px-10 py-2 justify-self-end tracking-wider rounded-full;
+    color: #3369ff;
+    border: 1px #3369ff solid;
+    appearance: none;
+    cursor: pointer;
+  }
+}
+
+@layer components {}
+
+.btn-main-h {
+  @apply w-fit px-10 py-2 justify-self-end tracking-wider rounded-full;
+  border: 1px #3369ff solid;
+  color: #3369ff;
+}
+
+.btn-main-h:hover {
+  background-color: #3369ff !important;
+  color: white !important;
+}
+
+.btn-main-f {
+  @apply w-fit px-10 py-2 justify-self-end tracking-wider rounded-full;
+  background-color: #3369ff;
+  color: white;
+}
+.btn-main-f:hover {
+  background-color: #5c84f0 !important;
+}
+
+/* selector */
+.form-main-select {
+  @apply w-full px-8 py-2 justify-self-end tracking-wider rounded-full;
+  color: #3369ff;
+  border: 1px #3369ff solid;
+  appearance: none;
+  cursor: pointer;
+}
+
+.form-main-select::after {
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: var(--select-arrow);
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+select.form-main-select {
+  background-image:
+    linear-gradient(45deg, transparent 50%, #3369ff 50%),
+    linear-gradient(135deg, #5c84f0 50%, transparent  50%),
+    linear-gradient(to right, #9db5f7, #9db5f7);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+}
+
+select.form-main-select:focus {
+  background-image:
+    linear-gradient(45deg, #5c84f0  50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, #5c84f0 50%),
+    linear-gradient(to right, #9db5f7, #9db5f7);
+  background-position:
+    calc(100% - 15px) 1em,
+    calc(100% - 20px) 1em,
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+  border-color: #5c84f0;
+  outline: 0;
+}
