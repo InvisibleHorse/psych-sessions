@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardTitle, CardDescription } from '../ui/card';
+import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from '../ui/card';
 import { Session } from '../../models/Session';
 
 interface SessionsProps {
@@ -12,7 +12,8 @@ interface SessionsProps {
           {sessions.map( session => (< Card  key={session.id}>
             <CardHeader>
                 <CardTitle>{session.name}</CardTitle>
-                <CardDescription>{session.date.toDateString()}</CardDescription>
+                <CardDescription></CardDescription>
+                <CardFooter className='cardFooter'>{session.date.toDateString()} at {session.time}</CardFooter>
             </CardHeader>
         </Card >
         ))}

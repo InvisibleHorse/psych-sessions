@@ -6,6 +6,7 @@ export type Session = {
   productId: string;
   name: string;
   date: Date;
+  time: string;
 
   durationMinutes: number;
   price: string;

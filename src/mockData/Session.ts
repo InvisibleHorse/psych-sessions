@@ -7,6 +7,7 @@ export const sessions: Session[] = [
     productId: '1',
     name: 'Princess Carolyn - Group Therapy',
     date: new Date(2024, 6, 4),
+    time: '12:30 PM',
 
     durationMinutes: 60,
     price: '50',
@@ -23,6 +24,7 @@ export const sessions: Session[] = [
     productId: '2',
     name: 'Diane Nguyen - Coaching Session',
     date: new Date(2024, 6, 4),
+    time: '03:00 PM',
 
     durationMinutes: 90,
     price: '75',
@@ -39,6 +41,7 @@ export const sessions: Session[] = [
     productId: '3',
     name: 'BoJack Horseman - Classic Therapy',
     date: new Date(2024, 6, 5),
+    time: '10:00 AM',
 
     durationMinutes: 45,
     price: '40',
@@ -55,6 +58,8 @@ export const sessions: Session[] = [
     productId: '4',
     name: 'Mr. Peanutbutter - Mindfulness Training',
     date: new Date(2024, 6, 5),
+    time: '01:00 PM',
+
 
     durationMinutes: 30,
     price: '35',
@@ -71,6 +76,7 @@ export const sessions: Session[] = [
     productId: '5',
     name: 'Sarah Lynn - Stress Management',
     date: new Date(2024, 6, 5),
+    time: '03:30 PM',
 
     durationMinutes: 60,
     price: '60',
@@ -87,6 +93,7 @@ export const sessions: Session[] = [
     productId: '6',
     name: 'Todd Chavez - Career Counseling',
     date: new Date(2024, 6, 6),
+    time: '11:30 AM',
 
     durationMinutes: 75,
     price: '70',

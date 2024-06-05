@@ -87,16 +87,19 @@
     color: #3369ff;
   }
 
-  p, span {
+  p,
+  span {
     font-family: Arial, Helvetica, sans-serif;
   }
-  input {
-    @apply w-full px-10 py-2 justify-self-end tracking-wider rounded-full;
+
+  .input {
+    @apply w-full px-4 py-2 justify-self-end tracking-wider rounded-full;
     color: #3369ff;
     border: 1px #3369ff solid;
     appearance: none;
     cursor: pointer;
   }
+
 }
 
 @layer components {}
@@ -117,6 +120,7 @@
   background-color: #3369ff;
   color: white;
 }
+
 .btn-main-f:hover {
   background-color: #5c84f0 !important;
 }
@@ -137,10 +141,11 @@
   background-color: var(--select-arrow);
   clip-path: polygon(100% 0%, 0 0%, 50% 100%);
 }
+
 select.form-main-select {
   background-image:
     linear-gradient(45deg, transparent 50%, #3369ff 50%),
-    linear-gradient(135deg, #5c84f0 50%, transparent  50%),
+    linear-gradient(135deg, #5c84f0 50%, transparent 50%),
     linear-gradient(to right, #9db5f7, #9db5f7);
   background-position:
     calc(100% - 20px) calc(1em + 2px),
@@ -155,7 +160,7 @@ select.form-main-select {
 
 select.form-main-select:focus {
   background-image:
-    linear-gradient(45deg, #5c84f0  50%, transparent 50%),
+    linear-gradient(45deg, #5c84f0 50%, transparent 50%),
     linear-gradient(135deg, transparent 50%, #5c84f0 50%),
     linear-gradient(to right, #9db5f7, #9db5f7);
   background-position:
@@ -169,4 +174,49 @@ select.form-main-select:focus {
   background-repeat: no-repeat;
   border-color: #5c84f0;
   outline: 0;
+}
+
+/* card */
+
+.cardFooter {
+  font-size: 14px;
+  color: #3369ff;
+  padding-bottom: 0;
+}
+
+.smallerInput {
+  width: fit-content;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.smallerInput select, .smallerInput input{
+  @apply py-1;
+}
+
+.sessionAdjustments {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  padding: 1rem 0;
+}
+
+.tableForForm {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.tableForForm div {
+  width: fit-content;
+}
+.fitContent {
+  width: fit-content;
+}
+.checkbox {
+  display:flex;
+}
+.rightAlign{
+  display: flex;
+  justify-content: end;
 }
