@@ -84,8 +84,6 @@ const AddSession: React.FC<AddSessionProps> = ({ addSession }) => {
                                     ))}
                                 </select>
                             </div>
-                            <hr className='pb-4'/>
-                            <h3 className='pb-4'>Adjust details:</h3>
                             <div className='tableForForm'>
                                 <div className='mb-4'>
                                     <label className='block text-sm font-medium mb-2'>Date</label>
@@ -106,6 +104,8 @@ const AddSession: React.FC<AddSessionProps> = ({ addSession }) => {
                                     />
                                 </div>
                             </div>
+                            <hr className='pb-4'/>
+                            <h3 className='pb-4'>Adjust details:</h3>
                             <div className='sessionAdjustments'>
                                 <div className='mb-4 smallerInput'>
                                     <label className='block text-sm font-medium mb-2'>Duration (Minutes)</label>

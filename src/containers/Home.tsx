@@ -14,6 +14,11 @@ export default function Home() {
     const addSession = (newSession: Session) => {
       setSessions([...sessions, newSession]);
     };
+
+    const deleteSession = (id: string) => {
+        setSessions(sessions.filter(session => session.id !== id));
+    };
+
     return (
         <>
             <div className='grid grid-cols-3 gap-0 my-12'>
@@ -22,7 +27,7 @@ export default function Home() {
                 <AddSession  addSession={addSession}/>
             </div>
             <div>
-                <Sessions sessions={sessions} />
+                <Sessions sessions={sessions} deleteSession={deleteSession}/>
             </div>
         </>
     )
