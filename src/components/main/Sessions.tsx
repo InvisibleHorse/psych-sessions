@@ -24,9 +24,9 @@ const Sessions: React.FC<SessionsProps> = ({ sessions, deleteSession }) => {
                         <img
                             src={deleteIcon}
                             alt="Delete"
-                            className='ml-4 cursor-pointer h-6 w-6'  // Adjust styling as needed
+                            className='ml-4 cursor-pointer h-6 w-6'
                             onClick={() => {
-                                console.log(`Deleting session with id: ${session.id}`); // Debug statement
+                                console.log(`Deleting session with id: ${session.id}`);
                                 deleteSession(session.id);
                             }}
                         />
