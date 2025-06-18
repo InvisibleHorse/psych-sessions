@@ -67,8 +67,10 @@ const AddSession: React.FC<AddSessionProps> = ({ addSession }) => {
         <div className="flex justify-end">
           <SheetTrigger className="btn-main-h">Add + </SheetTrigger>
         </div>
-        <SheetContent side="left">
-          s
+        <SheetContent
+          side="left"
+          className="w-full h-full max-w-none p-6 sm:max-w-md"
+        >
           <SheetHeader>
             <h2>Add a session</h2>
             <SheetDescription>
